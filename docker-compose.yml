@@ -1,0 +1,10 @@
+
+services:
+  hospital_portal_web:
+    build:
+      context: ..\portalHospitalT
+      dockerfile: Dockerfile
+    container_name: hospital_portal_web
+    ports:
+      - "8081:80"
+    restart: always
