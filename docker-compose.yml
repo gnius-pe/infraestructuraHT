@@ -2,7 +2,7 @@
 services:
   hospital_portal_web:
     build:
-      context: ..\portalHospitalT
+      context: ../portalHospitalT
       dockerfile: Dockerfile
     container_name: hospital_portal_web
     ports:
