@@ -5,7 +5,7 @@ services:
     build: ../control-vacunas-servicio
     container_name: servicio_vacunas
     ports:
-      - "3000:3000"
+      - "2000:3000"
   
   cliente_vacunas:
     build: ../control-vacunas-cliente
