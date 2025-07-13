@@ -1,10 +1,16 @@
 
 services:
-  hospital_portal_web:
-    build:
-      context: ../portalHospitalT
-      dockerfile: Dockerfile
-    container_name: hospital_portal_web
+
+  servicio_vacunas:
+    build: ../control-vacunas-servicio
+    container_name: servicio_vacunas
     ports:
-      - "8081:80"
-    restart: always
+      - "3000:3000"
+  
+  cliente_vacunas:
+    build: ../control-vacunas-cliente
+    container_name: control-vacunas-cliente
+    ports:
+      - "5173:80"
+    depends_on:
+      - servicio_vacunas
